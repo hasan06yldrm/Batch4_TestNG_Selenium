@@ -36,7 +36,7 @@ public class S03_VerifyUserNameIsCorrect {
         //1. getText() ->it will work %99, it will return String
         //2. getAttribute("") ->second way of getting text espescially
 
-        WebElement profilUsername=driver.findElement(By.cssSelector());
+        WebElement profilUsername=driver.findElement(By.cssSelector(""));
 
         String actualProfilUsename=profilUsername.getText();
 
