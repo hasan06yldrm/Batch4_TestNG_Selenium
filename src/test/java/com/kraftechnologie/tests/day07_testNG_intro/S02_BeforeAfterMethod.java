@@ -9,16 +9,16 @@ public class S02_BeforeAfterMethod {
         System.out.println("************ Before Method **********");
         System.out.println("WebDriver, Opening Browser");
     }
-    @Test
+    @Test  (priority = 2)
     public void test1(){
         System.out.println("First Test Case");
     }
     //@Test
-    @Test  @Ignore
+    @Test (priority = 3) //@Ignore
     public void test2(){
         System.out.println("Second Test Case");
     }
-    @Test
+    @Test  (priority = 1)//sıralamayı bu priority e göre yapacak
     public void test3(){
         System.out.println("Third Test Case");
     }
