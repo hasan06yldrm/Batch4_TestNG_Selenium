@@ -72,6 +72,7 @@ public class S03_DropDownWithoutSelectTag {
 
         //click on other
         //elementInterceptedException
-        //elements.get(5).click();
+        Thread.sleep(3000);
+        elements.get(5).click();
     }
 }
