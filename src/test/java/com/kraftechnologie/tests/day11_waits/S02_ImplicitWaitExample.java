@@ -33,6 +33,4 @@ public class S02_ImplicitWaitExample {
         WebElement message = driver.findElement(By.id("message"));
         Assert.assertEquals(message.getText(),"It's gone!");
     }
-
-
 }
