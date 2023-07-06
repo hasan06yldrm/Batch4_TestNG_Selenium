@@ -19,8 +19,12 @@ public class S01_PositiveLoginTest extends TestBase {
         driver.get(ConfigurationReader.get("url"));
 
         //OLD WAY
-        WebElement emailInputBox = driver.findElement(By.cssSelector("#email"));
-        WebElement passwordInputBox = driver.findElement(By.cssSelector("yourPassword"));
+       /* WebElement emailInputBox = driver.findElement(By.cssSelector("#email"));
+        WebElement passwordInputBox = driver.findElement(By.cssSelector("#yourPassword"));
+        WebElement loginButton=driver.findElement(By.xpath("//button[.='Login']"));
+        emailInputBox.sendKeys("...");
+        passwordInputBox.sendKeys("...");
+        loginButton.click(); */
 
         LoginPage loginPage=new LoginPage();
 
@@ -38,6 +42,46 @@ public class S01_PositiveLoginTest extends TestBase {
         String actual=driver.getCurrentUrl();
 
         Assert.assertEquals(actual,expected);
+    }
+    /**
+     go to kraft login page
+     login as Mike
+     use login(String username, String password)
+     validate that you are on the dashboard with url
+
+     */
+    @Test
+    public void loginTest_2(){
+       driver.get(ConfigurationReader.get("url"));
+
+       LoginPage loginPage=new LoginPage();
+
+       //call login() method
+       loginPage.login(ConfigurationReader.get("userEmail"),ConfigurationReader.get("userPassword"));
+
+       String expected="https://www.krafttechlab.com/index";
+       String actual=driver.getCurrentUrl();
+       Assert.assertEquals(actual,expected);
+    }
+    /**
+     go to kraft login page
+     login as Mike
+     use login()
+     validate that you are on the dashboard with url
+     */
+    @Test
+    public void loginTest_3(){
+        driver.get(ConfigurationReader.get("url"));
+
+        LoginPage loginPage=new LoginPage();
+        //call login() method
+        loginPage.login();
+
+        //assertion
+        String expected="https://www.krafttechlab.com/index";
+        String actual=driver.getCurrentUrl();
+        Assert.assertEquals(actual,expected);
+
 
     }
 }

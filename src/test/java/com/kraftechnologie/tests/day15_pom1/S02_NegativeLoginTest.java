@@ -64,7 +64,7 @@ public class S02_NegativeLoginTest extends TestBase {
         Assert.assertEquals(actual,expected);
     }
     /**
-
+     go to kraft login page
      login with Mike
      Verify that uptitles are following
      Dashboard
