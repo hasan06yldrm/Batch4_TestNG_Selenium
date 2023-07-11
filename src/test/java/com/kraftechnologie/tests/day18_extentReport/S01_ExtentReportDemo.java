@@ -8,7 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class S01_ExtendReportDemo {
+public class S01_ExtentReportDemo {
     //this class is used for starting and building reports
     ExtentReports report;
     //this class is used to create html report file

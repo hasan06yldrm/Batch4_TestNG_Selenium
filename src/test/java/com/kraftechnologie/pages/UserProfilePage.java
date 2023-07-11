@@ -9,6 +9,13 @@ public class UserProfilePage extends BasePage{
 
     @FindBy(css = "[role='alert']")
     public WebElement updateMessage;
+
+    @FindBy(xpath = "//*[.='Experience Details']")
+    public WebElement experienceDetails;
+
+    @FindBy(xpath = "//*[.='Education Details']")
+    public WebElement educationDetails;
+
     public void navigateToOverViewMenu(String tab){
         WebElement tabElement= Driver.get().findElement(By.xpath("//li/button[.='" + tab + "']"));
         tabElement.click();

@@ -20,8 +20,12 @@ public class EditProfilePage extends BasePage{
     @FindBy(xpath = "//*[.='Save Changes']")
     public WebElement saveChangeBtn;
 
-    public void selectJob(String jobObption){
+    public void selectJob(String jobOption){
         Select select=new Select(jobInputBox);
-        select.selectByVisibleText(jobObption);
+        select.selectByVisibleText(jobOption);
+    }
+    public String getSelectedJob(){
+        Select select=new Select(jobInputBox);
+        return select.getFirstSelectedOption().getText();
     }
 }

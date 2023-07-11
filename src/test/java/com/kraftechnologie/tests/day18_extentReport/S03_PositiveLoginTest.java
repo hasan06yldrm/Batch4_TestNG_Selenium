@@ -1,4 +1,4 @@
-package com.kraftechnologie.tests.day18_extendReport;
+package com.kraftechnologie.tests.day18_extentReport;
 
 import com.kraftechnologie.pages.LoginPage;
 import com.kraftechnologie.tests.TestBase;

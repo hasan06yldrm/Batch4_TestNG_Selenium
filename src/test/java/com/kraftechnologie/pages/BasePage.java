@@ -35,4 +35,7 @@ public abstract class BasePage {
         WebElement moduleElement = Driver.get().findElement(By.xpath(locator2));
         BrowserUtils.clickWithJS(moduleElement);
     }
+    public String getUserAccountName(){
+        return userAccountName.getText();
+    }
 }

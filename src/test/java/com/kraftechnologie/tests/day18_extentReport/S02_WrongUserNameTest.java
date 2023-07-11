@@ -1,4 +1,4 @@
-package com.kraftechnologie.tests.day18_extendReport;
+package com.kraftechnologie.tests.day18_extentReport;
 
 import com.kraftechnologie.pages.LoginPage;
 import com.kraftechnologie.tests.TestBase;
@@ -6,7 +6,7 @@ import com.kraftechnologie.utilities.ConfigurationReader;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class WrongUserNameTest extends TestBase {
+public class S02_WrongUserNameTest extends TestBase {
     @Test
     public void wrongUserEmail() {
         LoginPage loginPage=new LoginPage();

@@ -13,6 +13,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class S01_DashboardTest2 extends TestBase {
+    /**
+
+     login with Mike
+     verify that you are on the dashboard page by using 'Dashboard' keyword at top-left
+     Verify that uptitles are following by using BrowserUtils method
+     Dashboard
+     Developers
+     Components
+     Forms
+     JavaScript
+     mike
+     */
+
     LoginPage loginPage;
     @Test
     public void verifyList() {
